@@ -8,32 +8,63 @@
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+  <section class="topNav">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="leftNav d-flex">
+          <div><a href="#"><img src="images/logo.svg" alt="snap"></a></div>
+          <nav>
+            <a href="#">Features</a>
+            <a href="#">Company</a>
+            <a href="#">Careers</a>
+            <a href="#">About</a>
+          </nav>
+        </div>
+        <div class="rightNav">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="mainBody">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col col-12 col-md-4">
+          <h1>Make remote work</h1>
+          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <a href="#" class="button">Learn more</a>
+        </div>
+        <div class="col col-12 col-md-6">
+          <img src="images/image-hero-desktop.png" alt="">
+        </div>
+      </div>
+      
 
-  Features
-  Company
-  Careers
-  About
+    </div>
+  </section>
 
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://ninninny.com">NinNinNy</a>.
   </div>
 </body>
 </html>
