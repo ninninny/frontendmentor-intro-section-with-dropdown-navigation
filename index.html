@@ -24,47 +24,62 @@
 </head>
 <body>
   <section class="topNav">
-    <div class="container">
       <div class="d-flex justify-content-between">
-        <div class="leftNav d-flex">
+        <div class="leftNav d-flex align-items-center">
           <div><a href="#"><img src="images/logo.svg" alt="snap"></a></div>
           <nav>
-            <a href="#">Features</a>
-            <a href="#">Company</a>
-            <a href="#">Careers</a>
-            <a href="#">About</a>
+            <button class="button medium hasSub">Features
+              <ul class="submenu">
+                <li class="icon icon-todo"><a href="#">Todo List</a></li>
+                <li class="icon icon-calendar"><a href="#">Calendar</a></li>
+                <li class="icon icon-reminders"><a href="#">Reminders</a></li>
+                <li class="icon icon-planning"><a href="#">Planning</a></li>
+              </ul>
+            </button>
+            <button class="button medium hasSub">Company
+              <ul class="submenu">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </button>
+            <button class="button medium" href="#">Careers</button>
+            <button class="button medium" href="#">About</button>
           </nav>
         </div>
         <div class="rightNav">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+          <button class="button medium" href="#">Login</button>
+          <button class="button medium secondary" href="#">Register</button>
         </div>
       </div>
-    </div>
   </section>
   
   <section class="mainBody">
     <div class="container">
       <div class="row align-items-center justify-content-between">
-        <div class="col col-12 col-md-4">
-          <h1>Make remote work</h1>
+        <div class="pageIntro col col-12 col-md-5">
+          <h1>Make <br>remote work</h1>
           <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-          <a href="#" class="button">Learn more</a>
+          <a href="#" class="button primary large">Learn more</a>
+          <ul class="clientList d-flex justify-content-between align-items-center">
+            <li><img src="images/client-databiz.svg" alt="databiz"></li>
+            <li><img src="images/client-audiophile.svg" alt="audio phile"></li>
+            <li><img src="images/client-meet.svg" alt="meet"></li>
+            <li><img src="images/client-maker.svg" alt="maker"></li>
+          </ul>
         </div>
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-5">
           <img src="images/image-hero-desktop.png" alt="">
         </div>
       </div>
-      
-
     </div>
   </section>
-
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://ninninny.com">NinNinNy</a>.
   </div>
+
+  <script src="js/script.js" ></script>
 </body>
 </html>
