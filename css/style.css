@@ -31,8 +31,10 @@ h1{
 
 /* Color */
 body,
+.topNav,
 .topNav button,
 .topNav a,
+#mainMenu,
 .topNav .submenu{
     color: hsl(0, 0%, 41%);
     background-color: hsl(0, 0%, 98%);
@@ -77,12 +79,6 @@ button{
     background: transparent;
     border: none;
 }
-.onlyDesktop{
-    display:block !important;
-}
-.onlyMobile{
-    display:none !important;
-}
 
 
 /* Button */
@@ -95,6 +91,7 @@ button,
     border-style: solid;
     border-radius: 15px;
     padding:5px;
+    transition: all 0.1s ease;
 }
 .button.medium{
     padding:7px 20px;
@@ -114,18 +111,21 @@ button,
 .topNav .button{
     margin-left: 10px;
 }
-.topNav .leftNav nav{
+#mainMenu {
+    position:relative;
     margin-left: 30px;
+    padding:0;
 }
-.topNav .leftNav nav>button.hasSub::after{
+#mainMenu>button.hasSub::after{
     display: inline-block;
+    position:relative;
     content: url(../images/icon-arrow-down.svg);
     margin-left:5px;
 }
-.topNav .leftNav nav>button.hasSub.active::after{
+#mainMenu>button.hasSub.active::after{
     content: url(../images/icon-arrow-up.svg);
 }
-.topNav .submenu {
+#mainMenu .submenu {
     position:absolute;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
     padding-left:20px;
@@ -133,14 +133,20 @@ button,
     border-radius: 10px;
     height:0;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
-.topNav .submenu li{
+#mainMenu .submenu li{
     list-style: none;
     text-align: left;
     margin:0;
     padding:3px;
     
 }
+.mobileMenu{
+    content: url(../images/icon-menu.svg);
+    z-index: 333;
+}
+
 /* Nav Icon */
 .icon{
     display: flex;
@@ -189,8 +195,63 @@ button,
     margin:100px 0 0 0;
     padding:0;
     list-style: none;
+    gap:30px;
 }
 .clientList li{
     list-style: none;
     display:inline-block;
+}
+
+/* Responsive */
+@media(max-width:576px){
+    h1{
+        font-size: 36px;
+        line-height: 36px;
+        white-space:normal;
+    }
+
+    #mainMenu {
+        position:absolute;
+        margin-left: auto;
+        width:0;
+        /*width:60%;*/
+        height: 100vh;
+        top:0;
+        right:0;
+        z-index: 222;
+        padding: 80px 0;
+    }
+    #mainMenu button{
+        text-align: left;
+        position:relative;
+        width:100%;
+    }
+    #mainMenu>button.hasSub::after{
+        display:block;
+        position:absolute;
+        top:7px;
+        left:90px;
+    }
+    #mainMenu .submenu {
+        position:relative;
+        display:block;
+        box-shadow: none;
+        padding-top:0;
+        padding-bottom:0;
+        margin:0;
+    }
+
+
+    .pageIntro h1{
+        margin-top:40px;
+    }
+    .pageIntro p{
+        margin-top:25px;
+    }
+    .pageIntro a.button{
+        margin-top:25px;
+    }
+    .clientList{
+        margin:40px 0 0 0;
+    }
 }

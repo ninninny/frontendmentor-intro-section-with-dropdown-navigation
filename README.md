@@ -47,6 +47,8 @@ Users should be able to:
 
 This is my first challenge participating on Frontend Mentor, I sure learned about how to be part of the community XD.
 
+I experienced making a dropdown menu many times, but this time I decided to use another way to develop it. Most of the time that I create a website menu, I always separate it into two objects, one for desktop and another one for mobile. This time I use the same object and styled it to be both for desktop and mobile, switched by Bootstrap class and CSS.
+
 ### Continued development
 
 After finish this, I hope I'll do it again with React.
