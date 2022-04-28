@@ -1,48 +1,48 @@
 
 // Desktop Navigation
 
-if($(window).width()<576){
-    //Mobile
-    $('.mobileMenu').click(()=>{
-        if($('.mobileMenu').hasClass('active')){
-            mobileMenuClose('.mobileMenu','#mainMenu')
-        } else {
-            mobileMenuOpen('.mobileMenu','#mainMenu')
-        }
-    })
-    $('.hasSub').click((e)=>{
-        if($(e.currentTarget).hasClass('active')){
-            subMenuClose(e)
-        } else {
-            subMenuOpen(e)
-        }
-    });
-    $(window).scroll(()=>{
-        mobileMenuClose('.mobileMenu','#mainMenu')
-    })
-    $(window).click(()=>{
-        mobileMenuClose('.mobileMenu','#mainMenu')
-    })
+if($(window).width()<=576){
+    $('.topNav').removeClass('desktop')
+    $('.topNav').addClass('mobile')
+
 } else{
-    //Desktop
-    $('.hasSub').hover((e)=>{
-        subMenuOpen(e)
-    }, (e)=>{
-        subMenuClose(e)
-    });
+    $('.topNav').removeClass('mobile')
+    $('.topNav').addClass('desktop')
 }
 
+$('.mobileMenu').click(()=>{
+    if($('.mobileMenu').hasClass('active')){
+        mobileMenuClose('.mobileMenu','#mainMenu')
+    } else {
+        mobileMenuOpen('.mobileMenu','#mainMenu')
+    }
+})
 
+$('.mobile .hasSub').click((e)=>{
+    if($(e.currentTarget).hasClass('active')){
+        subMenuClose(e)
+    } else {
+        subMenuOpen(e)
+    }
+});
+
+$('.desktop .hasSub').hover((e)=>{
+    subMenuOpen(e)
+}, (e)=>{
+    subMenuClose(e)
+});
 
 let mobileMenuOpen =(btn,menu)=>{
     $(btn).addClass('active')
     $(menu).css('width','65%')
+    $('.topNav').css('background-color','transparent')
     $('.pageOverlay').css('height','100%')
 
 }
 let mobileMenuClose =(btn,menu)=>{
     $(btn).removeClass('active')
     $(menu).css('width','0')
+    $('.topNav').css('background-color','hsl(0, 0%, 98%)')
     $('.pageOverlay').css('height','0')
 }
 
@@ -57,6 +57,14 @@ let subMenuOpen =(e)=> {
 let subMenuClose =(e)=> {
     $(e.currentTarget).removeClass('active')
     $(e.currentTarget).find('.submenu').css({
+        'height':'0',
+        'padding-top':'0',
+        'padding-bottom':'0'
+    })
+}
+let allSubMenuClose =()=>{
+    $('.hasSub').removeClass('active')
+    $('.hasSub').find('.submenu').css({
         'height':'0',
         'padding-top':'0',
         'padding-bottom':'0'
