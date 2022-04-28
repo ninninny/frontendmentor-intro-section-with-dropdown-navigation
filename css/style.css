@@ -31,11 +31,11 @@ h1{
 
 /* Color */
 body,
-.topNav,
+/*.topNav,*/
 .topNav button,
-.topNav a,
 #mainMenu,
-.topNav .submenu{
+.topNav .submenu,
+.topNav .submenu a{
     color: hsl(0, 0%, 41%);
     background-color: hsl(0, 0%, 98%);
 }
@@ -61,6 +61,9 @@ button,
     color:hsl(0, 0%, 8%);
     background-color: hsl(0, 0%, 98%);
 }
+.pageOverlay{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 /* Global */
 .container {
@@ -79,7 +82,6 @@ button{
     background: transparent;
     border: none;
 }
-
 
 /* Button */
 button,
@@ -100,16 +102,19 @@ button,
     padding:15px 30px;
 }
 
+
 /* topNav */
 .topNav {
     padding:20px 40px;
     position:fixed;
     top:0;
     width:100%;
-    z-index: 888;
 }
 .topNav .button{
     margin-left: 10px;
+}
+.topNav .leftNav{
+    width:auto;
 }
 #mainMenu {
     position:relative;
@@ -143,8 +148,18 @@ button,
     
 }
 .mobileMenu{
-    content: url(../images/icon-menu.svg);
-    z-index: 333;
+    display:block;
+    width:32px;
+    height:32px;
+    content:'';
+    background-image: url(../images/icon-menu.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0;
+}
+.mobileMenu.active{
+    background-image: url(../images/icon-close-menu.svg);
 }
 
 /* Nav Icon */
@@ -175,6 +190,14 @@ button,
     background-image: url(../images/icon-planning.svg);
 }
 
+/* pageOverlay */
+.pageOverlay{
+    display:block;
+    position: absolute;
+    width:100%;
+    height: 0;
+    top:0;
+}
 
 /* mainBody */
 .mainBody{
@@ -202,24 +225,48 @@ button,
     display:inline-block;
 }
 
+/* z-index */
+.topNav {
+    z-index: 777;
+}
+.mobileMenu{
+    z-index: 999;
+}
+#mainMenu{
+    z-index: 888;
+}
+.pageOverlay{
+    z-index: 555;
+}
 /* Responsive */
 @media(max-width:576px){
+    body,
+    p{
+        font-size: 16px;
+        line-height: 26px;
+    }
     h1{
         font-size: 36px;
         line-height: 36px;
         white-space:normal;
     }
 
+    .topNav{
+        padding: 20px 16px;
+    }
+    .topNav .leftNav{
+        width:100%;
+    }
+
     #mainMenu {
         position:absolute;
         margin-left: auto;
         width:0;
-        /*width:60%;*/
         height: 100vh;
         top:0;
         right:0;
-        z-index: 222;
         padding: 80px 0;
+        transition: all 0.3s ease;
     }
     #mainMenu button{
         text-align: left;
