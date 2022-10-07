@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [LINK](https://www.frontendmentor.io/solutions/jquery-dropdown-navigation-ry4D_durq)
+- Live Site URL: [LINK](https://ninninny.github.io/frontendmentor-intro-section-with-dropdown-navigation/)
 
 ## My process
 
