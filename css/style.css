@@ -24,6 +24,7 @@ h1{
     font-weight: 700;
 }
 .topNav button,
+.topNav .button,
 .topNav a{
     font-size: 14px;
 }
@@ -33,6 +34,7 @@ h1{
 body,
 .topNav,
 .topNav button,
+.topNav .button,
 #mainMenu,
 .topNav .submenu,
 .topNav .submenu a{
@@ -41,6 +43,7 @@ body,
 }
 h1,
 .topNav button:hover,
+.topNav .button:hover,
 .topNav a:hover,
 .topNav .submenu li:hover a{
     color:hsl(0, 0%, 8%);
@@ -121,13 +124,15 @@ button,
     margin-left: 30px;
     padding:0;
 }
-#mainMenu>button.hasSub::after{
+#mainMenu>button.hasSub::after,
+#mainMenu>a.hasSub::after{
     display: inline-block;
     position:relative;
     content: url(../images/icon-arrow-down.svg);
     margin-left:5px;
 }
-#mainMenu>button.hasSub.active::after{
+#mainMenu>button.hasSub.active::after,
+#mainMenu>a.hasSub.active::after{
     content: url(../images/icon-arrow-up.svg);
 }
 #mainMenu .submenu {
@@ -268,12 +273,14 @@ button,
         padding: 80px 0;
         transition: all 0.3s ease;
     }
-    #mainMenu button{
+    #mainMenu button,
+    #mainMenu .button{
         text-align: left;
         position:relative;
         width:100%;
     }
-    #mainMenu>button.hasSub::after{
+    #mainMenu>button.hasSub::after,
+    #mainMenu>a.hasSub::after{
         display:block;
         position:absolute;
         top:7px;
