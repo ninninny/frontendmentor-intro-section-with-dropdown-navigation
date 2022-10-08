@@ -125,14 +125,14 @@ button,
     padding:0;
 }
 #mainMenu>button.hasSub::after,
-#mainMenu>a.hasSub::after{
+#mainMenu>div.hasSub::after{
     display: inline-block;
     position:relative;
     content: url(../images/icon-arrow-down.svg);
     margin-left:5px;
 }
 #mainMenu>button.hasSub.active::after,
-#mainMenu>a.hasSub.active::after{
+#mainMenu>div.hasSub.active::after{
     content: url(../images/icon-arrow-up.svg);
 }
 #mainMenu .submenu {
@@ -280,7 +280,7 @@ button,
         width:100%;
     }
     #mainMenu>button.hasSub::after,
-    #mainMenu>a.hasSub::after{
+    #mainMenu>div.hasSub::after{
         display:block;
         position:absolute;
         top:7px;
